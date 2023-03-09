@@ -6,6 +6,18 @@ require("dotenv").config({
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  developMiddleware: app => {
+    app.use(
+      "/graphql",
+      proxy({
+        target: "https://fantastic-pear.flywheelsites.com",
+        changeOrigin: true,
+        pathRewrite: {
+          "^/graphql": "https://fantastic-pear.flywheelsites.com/graphql"
+        },
+      })
+    )
+  },
   siteMetadata: {
     title: `The Gatsby Garage`,
     siteUrl: `https://www.yourdomain.tld`,
