@@ -20,7 +20,7 @@ module.exports = {
   },
   siteMetadata: {
     title: `The Gatsby Garage`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://thegatsbymain.gatsbyjs.io`,
   },
   plugins: [
     {
